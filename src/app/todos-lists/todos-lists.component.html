@@ -1,0 +1,14 @@
+<div *ngFor="let list of lists; let i = index" class="list-item" (click) = isSelected(i)>
+    <h3>{{list.title}}</h3>
+    <hr />
+    <div>
+        <p>Newest:</p>
+        <p>- {{list.items[list.items.length - 1].description}}</p>
+    </div>
+    <hr />
+    <p>
+        User: {{username}}
+        | Role: {{ isAdmin ? "Admin" : "Employee" }}
+        | Employee ID: {{ employeeId }}
+    </p>
+</div>

@@ -1,0 +1,12 @@
+.lists {
+    display: flex;
+}
+
+.left {
+    width: 35%;
+    margin-right: 10px;
+}
+
+.right {
+    width: 65%;
+}

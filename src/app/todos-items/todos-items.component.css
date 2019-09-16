@@ -1,0 +1,9 @@
+.item {
+    display: flex;
+    height: 50px;
+    align-items: center;
+}
+
+.item input {
+    margin-right: 10px;
+}

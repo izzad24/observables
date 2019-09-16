@@ -1,0 +1,33 @@
+<h2>
+    Title: {{list.title}}
+</h2>
+
+<input type="text" [formControl]="listTitle"><button (click)="updateListTitle()">Confirm</button>
+
+<hr />
+<p>
+    User: {{username}}
+    | Role: {{ isAdmin ? "Admin" : "Employee" }}
+    | Employee ID: {{ employeeId }}
+</p>
+<div>
+    <input type="text" [formControl]="usernameForm" placeholder="username">
+    <button (click)="updateUsername()">Confirm</button>
+</div>
+<div>
+    <input type="checkbox" [formControl]="isAdminForm"><span>Is Admin?</span>
+    <button (click)="updateIsAdmin()">Confirm</button>
+</div>
+<div>
+    <input type="text" [formControl]="employeeIdForm" placeholder="employee ID">
+    <button (click)="updateEmployeeID()">Confirm</button>
+</div>
+
+<hr />
+
+<button (click)="addTask()">Add Task</button>
+
+<div *ngFor="let item of list.items" class="item">
+    <input type="checkbox" [checked]="item.completed" (change)="toggleCompleted(item)">
+    <p>{{item.description}}</p>
+</div>
